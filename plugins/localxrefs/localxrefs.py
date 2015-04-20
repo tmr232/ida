@@ -172,7 +172,7 @@ class localizedxrefs_t(idaapi.plugin_t):
 				info = r.xrefs[ea]
 	
 				if not fmt:
-					fmt = "%%s   %%s   0x%08X %%-%ds   %%s\n" % (len(info['offset']) + 15)
+					fmt = "%%s   %%s   0x%%08X %%-%ds   %%s\n" % (len(info['offset']) + 15)
 
 				idaapi.msg(fmt % (info['direction'], info['type'], info['ea'], info['offset'], info['text']))
 	
